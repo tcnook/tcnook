@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin - The Cozy Nook</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="brand">The Cozy Nook</div>
+      <div class="nav-links" id="nav-links"></div>
+    </nav>
+    <main style="padding: 2rem; max-width: 1000px; margin: 0 auto;">
+      <h2 style="color: #E07A5F">Product Management</h2>
+      <table class="admin-table" id="admin-products-table">
+        <thead>
+          <tr>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <h3 style="color: #E07A5F; margin-top: 2rem;">Add New Product</h3>
+      <form id="add-product-form" style="max-width: 600px;">
+        <label for="product-name">Name</label>
+        <input type="text" id="product-name" required />
+        <label for="product-description">Description</label>
+        <textarea id="product-description" rows="3"></textarea>
+        <label for="product-price">Price ($)</label>
+        <input type="number" step="0.01" id="product-price" required />
+        <label for="product-quantity">Quantity</label>
+        <input type="number" id="product-quantity" required />
+        <label for="product-image">Image Path (e.g., /public/images/custom.jpg)</label>
+        <input type="text" id="product-image" />
+        <button type="submit">Add Product</button>
+        <p id="admin-error" style="color: #b0423e"></p>
+      </form>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
